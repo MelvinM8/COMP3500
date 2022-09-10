@@ -67,6 +67,17 @@ boot(void)
 	kprintf("%s", harvard_copyright);
 	kprintf("\n");
 	
+	DEBUG(DB_VM, "DEBUG Message: Flag for VM has been raised.\n");
+	DEBUG(DB_SYSCALL, "DEBUG Message: Flag for SYSCALL has been raised.");
+	DEBUG(DB_LOCORE, "DEBUG Message: Flag for LOCORE has been raised.");
+	DEBUG(DB_INTERRUPT, "DEBUG Message: Flag for INTERRUPT has been raised.");
+	DEBUG(DB_DEVICE, "DEBUG Message: Flag for DEVICE has been raised.");
+	DEBUG(DB_THREADS, "DEBUG Message: Flag for THREADS has been raised.");
+	DEBUG(DB_EXEC, "DEBUG Message: Flag for EXEC has been raised.");
+	DEBUG(DB_VFS, "DEBUG Message: Flag for VFS has been raised.");
+	DEBUG(DB_SFS, "DEBUG Message: Flag for SFS has been raised.");
+	DEBUG(DB_NET, "DEBUG Message: Flag for NET has been raised.");
+	
 	hello();
 
 	kprintf("Put-your-group-name-here's system version %s (%s #%d)\n", 
